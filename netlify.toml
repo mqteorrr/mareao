@@ -1,0 +1,20 @@
+[build]
+  functions = "functions"
+
+[dev]
+  functions = "functions"
+
+[[redirects]]
+  from = "/app/short-url"
+  to = "/.netlify/functions/short-url"
+  status = 200
+
+[[redirects]]
+  from = "/r/*"
+  to = "/.netlify/functions/go/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/v/*"
+  to = "/.netlify/functions/details/:splat"
+  status = 200
